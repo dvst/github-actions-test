@@ -9,13 +9,20 @@ jobs:
       - name: time on linux
         run: date
   
-  Windows:
+  windows:
     runs-on: windows-latest
     steps:
       - name: time on windows
         run: Get-Date
-  Macos:
+  macos:
     runs-on: macos-latest
     steps:
       - name: time on mac
         run: date
+  macos-not-latest:
+    runs-on: macos-10.15
+    needs: [linux, windows, macos]
+    steps:
+      - name: time on mac
+        run: date
+    
