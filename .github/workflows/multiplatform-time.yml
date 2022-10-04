@@ -1,0 +1,21 @@
+name: "Multiplatform time"
+
+on:  push
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: time on linux
+        run: date
+  
+  Windows:
+    runs-on: windows-latest
+    steps:
+      - name: time on windows
+        run: Get-Date
+  Macos:
+    runs-on: macos-latest
+    steps:
+      - name: time on mac
+        run: date
