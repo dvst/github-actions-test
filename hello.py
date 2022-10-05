@@ -1,3 +1,1 @@
-#!/usr/bin/python
-
-print ("holla munworld")
+print('holla munworld')
