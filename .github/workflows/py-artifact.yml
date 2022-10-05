@@ -11,6 +11,7 @@ jobs:
     - name: Run python script
       run: python hello.py
   Build:
+    needs: Test
     runs-on: ubuntu-latest
     steps:
     - name: checkout code
